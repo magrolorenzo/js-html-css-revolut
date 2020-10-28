@@ -12,11 +12,12 @@ a{
 }
 
 header{
-    height: 130px;
+    height: 100px;
     padding: 0 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid grey;
 }
 
 .left-header, .right-header{
@@ -28,28 +29,47 @@ header{
 
 .left-header{
     width: 350px;
-    background-color: yellow;
+}
+
+#revolut-logo{
+    max-width: 25px;
+    margin-right: 50px;
+    cursor: pointer;
 }
 
 .right-header{
-    width: 750px;
+    width: 700px;
     justify-content: space-between;
-    background-color: purple;
 }
 
-.left-header a, .right-header a{
-    padding:0 20px;
-}
-
-.right-header span{
+.link{
     position: relative;
+    display: inline-block;
+    height: 100%;
+    padding-right:15px;
+    cursor: pointer;
+}
+
+.link > a{
+    line-height: 100px;
 }
 
 .dropdown{
     display: none;
     position: absolute;
-    top: 30px;
+    top: 80px;
     left: 0;
+    min-height: 100px;
+    min-width: 80px;
+    list-style-type: none;
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.dropdown li{
+    margin: 10px 0;
+    padding: 5px 10px;
 }
 
 .dropdown.visible{
